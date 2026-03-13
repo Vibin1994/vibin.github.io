@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Vibin Dharmaraj | React Native Developer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
 body{
+margin:0;
+font-family:Poppins;
 background:linear-gradient(120deg,#0f172a,#020617);
 color:white;
-overflow-x:hidden;
 }
 
 .container{
@@ -30,31 +24,9 @@ margin:auto;
 padding:20px;
 }
 
-/* animated background */
-
-.bg-animation{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-z-index:-1;
-background: radial-gradient(circle at 20% 30%, #22c55e55, transparent 40%),
-radial-gradient(circle at 80% 70%, #3b82f655, transparent 40%);
-animation: moveBg 8s infinite alternate;
-}
-
-@keyframes moveBg{
-0%{transform:translateY(0px)}
-100%{transform:translateY(-50px)}
-}
-
-/* header */
-
 header{
 text-align:center;
 padding:100px 20px;
-animation:fadeIn 1.5s ease;
 }
 
 header h1{
@@ -62,38 +34,29 @@ font-size:48px;
 }
 
 header p{
-margin-top:10px;
 color:#cbd5f5;
 }
 
-button{
+.btn{
+display:inline-block;
 margin-top:20px;
-padding:12px 30px;
-border:none;
-border-radius:8px;
+padding:12px 25px;
 background:#22c55e;
 color:white;
-cursor:pointer;
-transition:0.3s;
+border-radius:8px;
+text-decoration:none;
 }
-
-button:hover{
-transform:scale(1.05);
-}
-
-/* sections */
 
 section{
-margin-top:80px;
-animation:fadeUp 1s ease;
+margin-top:70px;
 }
 
 .section-title{
-font-size:30px;
-margin-bottom:25px;
+font-size:28px;
 border-bottom:2px solid #22c55e;
 display:inline-block;
 padding-bottom:5px;
+margin-bottom:20px;
 }
 
 /* skills */
@@ -109,19 +72,28 @@ background:rgba(255,255,255,0.05);
 padding:15px;
 border-radius:10px;
 text-align:center;
-backdrop-filter:blur(10px);
-transition:0.3s;
 }
 
-.skill:hover{
-transform:translateY(-5px);
+/* timeline */
+
+.timeline{
+border-left:3px solid #22c55e;
+padding-left:20px;
+}
+
+.timeline-item{
+margin-bottom:30px;
+}
+
+.timeline-item h3{
+margin-bottom:5px;
 }
 
 /* projects */
 
 .projects{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:25px;
 }
 
@@ -129,12 +101,6 @@ gap:25px;
 background:rgba(255,255,255,0.05);
 border-radius:10px;
 overflow:hidden;
-backdrop-filter:blur(10px);
-transition:0.3s;
-}
-
-.project:hover{
-transform:translateY(-10px);
 }
 
 .project img{
@@ -147,31 +113,23 @@ object-fit:cover;
 padding:20px;
 }
 
+.project-content h3{
+margin-bottom:10px;
+}
+
+.project-content p{
+color:#cbd5f5;
+}
+
 .project-content a{
 color:#22c55e;
 text-decoration:none;
-font-weight:bold;
 }
-
-/* footer */
 
 footer{
 margin-top:80px;
 text-align:center;
 color:#94a3b8;
-padding-bottom:40px;
-}
-
-/* animations */
-
-@keyframes fadeIn{
-from{opacity:0;transform:translateY(-20px)}
-to{opacity:1}
-}
-
-@keyframes fadeUp{
-from{opacity:0;transform:translateY(40px)}
-to{opacity:1}
 }
 
 </style>
@@ -179,8 +137,6 @@ to{opacity:1}
 </head>
 
 <body>
-
-<div class="bg-animation"></div>
 
 <div class="container">
 
@@ -190,22 +146,25 @@ to{opacity:1}
 
 <p>React Native Developer | 5+ Years Experience</p>
 
-<button onclick="window.location.href='mailto:vvibin19@gmail.com'">
-Contact Me
-</button>
+<a class="btn" href="resume.pdf">Download Resume</a>
 
 </header>
+
 
 <section>
 
 <h2 class="section-title">About Me</h2>
 
 <p>
-React Native developer with 5+ years experience building scalable mobile applications
-in fintech, OTT platforms, sports applications and service marketplaces.
+
+React Native developer with over 5 years of experience building high-performance mobile applications across fintech, OTT streaming platforms, sports analytics, and service marketplaces.
+
+Experienced in building scalable mobile architectures, optimizing performance, integrating APIs, and delivering production-grade applications used by thousands of users.
+
 </p>
 
 </section>
+
 
 <section>
 
@@ -221,16 +180,44 @@ in fintech, OTT platforms, sports applications and service marketplaces.
 <div class="skill">Socket.IO</div>
 <div class="skill">REST API</div>
 <div class="skill">SQLite</div>
+<div class="skill">Firebase</div>
 
 </div>
 
 </section>
+
+
+<section>
+
+<h2 class="section-title">Professional Experience</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<h3>React Native Developer</h3>
+
+<p>
+
+Worked on multiple production mobile applications including fintech platforms, OTT streaming apps and sports applications.
+
+Responsible for implementing scalable UI architecture, integrating REST APIs, improving performance, fixing production issues and deploying applications to the Play Store.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
 
 <section>
 
 <h2 class="section-title">Projects</h2>
 
 <div class="projects">
+
 
 <div class="project">
 
@@ -240,14 +227,20 @@ in fintech, OTT platforms, sports applications and service marketplaces.
 
 <h3>AHA OTT</h3>
 
-<p>Subscription based OTT streaming mobile platform.</p>
+<p>
 
-<a href="https://play.google.com/store/apps/details?id=ahaflix.tv" target="_blank">
+Subscription based OTT streaming platform providing regional movies and web series. Worked on UI modules, optimized video loading performance and improved crash analytics monitoring.
+
+</p>
+
+<a href="https://play.google.com/store/apps/details?id=ahaflix.tv">
 View App
 </a>
 
 </div>
 </div>
+
+
 
 <div class="project">
 
@@ -257,14 +250,20 @@ View App
 
 <h3>ICICI Mutual Fund</h3>
 
-<p>Investment mobile platform with buy/sell features.</p>
+<p>
 
-<a href="https://play.google.com/store/apps/details?id=com.csam.icici.bank.imobile" target="_blank">
+Mobile investment platform supporting Buy, Sell, Switch and SWP features. Implemented secure API integrations and improved investment flow performance.
+
+</p>
+
+<a href="https://play.google.com/store/apps/details?id=com.csam.icici.bank.imobile">
 View App
 </a>
 
 </div>
 </div>
+
+
 
 <div class="project">
 
@@ -274,18 +273,64 @@ View App
 
 <h3>FixMyCarDude</h3>
 
-<p>Location based car service booking app.</p>
+<p>
 
-<a href="https://play.google.com/store/apps/details?id=com.fixmycardude" target="_blank">
+Location-based vehicle service booking application. Implemented booking workflows, Stripe payment integration and real-time service status updates.
+
+</p>
+
+<a href="https://play.google.com/store/apps/details?id=com.fixmycardude">
 View App
 </a>
 
 </div>
 </div>
 
+
+
+<div class="project">
+
+<img src="images/scorekeeper.jpg">
+
+<div class="project-content">
+
+<h3>Social Scorekeeper</h3>
+
+<p>
+
+Sports scoring platform supporting real-time match updates and social interaction between users. Implemented live updates using Socket.IO.
+
+</p>
+
+<a href="https://play.google.com/store/apps/details?id=and.socialscorekeeper.app">
+View App
+</a>
+
+</div>
+</div>
+
+
 </div>
 
 </section>
+
+
+<section>
+
+<h2 class="section-title">Achievements</h2>
+
+<ul>
+
+<li>Built multiple production-ready mobile applications.</li>
+
+<li>Optimized application performance and reduced crash rates.</li>
+
+<li>Delivered scalable React Native solutions across multiple industries.</li>
+
+</ul>
+
+</section>
+
 
 <footer>
 
@@ -298,4 +343,5 @@ View App
 </div>
 
 </body>
+
 </html>
