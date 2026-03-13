@@ -1,26 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Vibin Dharmaraj Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vibin Dharmaraj | React Native Developer</title>
+
 <style>
+
 body{
+margin:0;
 font-family:Arial;
-margin:40px;
-background:#f4f4f4;
+background:#0f172a;
+color:white;
 }
+
 .container{
-max-width:900px;
+max-width:1100px;
 margin:auto;
-background:white;
-padding:30px;
+padding:20px;
+}
+
+header{
+text-align:center;
+padding:80px 20px;
+}
+
+header h1{
+font-size:48px;
+}
+
+header p{
+font-size:20px;
+color:#94a3b8;
+}
+
+button{
+background:#22c55e;
+border:none;
+padding:12px 24px;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+section{
+margin-top:80px;
+}
+
+.section-title{
+font-size:30px;
+border-bottom:2px solid #22c55e;
+display:inline-block;
+padding-bottom:5px;
+margin-bottom:20px;
+}
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:15px;
+}
+
+.skill{
+background:#1e293b;
+padding:15px;
+border-radius:6px;
+text-align:center;
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.project{
+background:#1e293b;
 border-radius:10px;
+overflow:hidden;
 }
-h1{
-color:#333;
+
+.project img{
+width:100%;
+height:180px;
+object-fit:cover;
 }
-.section{
-margin-top:30px;
+
+.project-content{
+padding:20px;
 }
+
+.project-content h3{
+margin-top:0;
+}
+
+.project-content a{
+color:#22c55e;
+text-decoration:none;
+font-weight:bold;
+}
+
+footer{
+text-align:center;
+margin-top:80px;
+color:#94a3b8;
+}
+
 </style>
 </head>
 
@@ -28,45 +114,134 @@ margin-top:30px;
 
 <div class="container">
 
+<header>
+
 <h1>Vibin Dharmaraj</h1>
 <p>React Native Developer | 5+ Years Experience</p>
 
-<div class="section">
-<h2>About Me</h2>
+<button onclick="window.location.href='mailto:vvibin19@gmail.com'">
+Contact Me
+</button>
+
+</header>
+
+<section>
+
+<h2 class="section-title">About Me</h2>
+
 <p>
-React Native developer with 5+ years experience building
-mobile applications in fintech, OTT, sports and service platforms.
+React Native developer with 5+ years experience building scalable mobile applications
+in fintech, OTT platforms, sports applications and service marketplaces.
 </p>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Tech Stack</h2>
+
+<div class="skills">
+
+<div class="skill">React Native</div>
+<div class="skill">JavaScript</div>
+<div class="skill">TypeScript</div>
+<div class="skill">Redux</div>
+<div class="skill">React Query</div>
+<div class="skill">Socket.IO</div>
+<div class="skill">REST API</div>
+<div class="skill">SQLite</div>
+
 </div>
 
-<div class="section">
-<h2>Tech Stack</h2>
-<ul>
-<li>React Native</li>
-<li>JavaScript</li>
-<li>TypeScript</li>
-<li>Redux</li>
-<li>React Query</li>
-<li>Socket.IO</li>
-<li>REST API</li>
-</ul>
+</section>
+
+<section>
+
+<h2 class="section-title">Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+
+<img src="images/fixmycar.jpg">
+
+<div class="project-content">
+
+<h3>FixMyCarDude</h3>
+
+<p>Location based service booking application with Stripe payments.</p>
+
+<a href="https://play.google.com/store/apps/details?id=com.fixmycardude" target="_blank">
+View App
+</a>
+
+</div>
 </div>
 
-<div class="section">
-<h2>Projects</h2>
-<ul>
-<li>FixMyCarDude</li>
-<li>ICICI Mutual Fund App</li>
-<li>Social Scorekeeper</li>
-<li>AHA OTT</li>
-</ul>
+
+<div class="project">
+
+<img src="images/icici.jpg">
+
+<div class="project-content">
+
+<h3>ICICI Mutual Fund App</h3>
+
+<p>Investment platform supporting buy, sell and switch investments.</p>
+
+<a href="https://play.google.com/store/apps/details?id=com.csam.icici.bank.imobile" target="_blank">
+View App
+</a>
+
+</div>
 </div>
 
-<div class="section">
-<h2>Contact</h2>
+
+<div class="project">
+
+<img src="images/scorekeeper.jpg">
+
+<div class="project-content">
+
+<h3>Social Scorekeeper</h3>
+
+<p>Sports score tracking application with real-time chat.</p>
+
+<a href="https://play.google.com/store/apps/details?id=and.socialscorekeeper.app" target="_blank">
+View App
+</a>
+
+</div>
+</div>
+
+
+<div class="project">
+
+<img src="images/aha.jpg">
+
+<div class="project-content">
+
+<h3>AHA OTT</h3>
+
+<p>Subscription based OTT streaming platform.</p>
+
+<a href="https://play.google.com/store/apps/details?id=ahaflix.tv" target="_blank">
+View App
+</a>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
 <p>Email: vvibin19@gmail.com</p>
 <p>LinkedIn: linkedin.com/in/vibin-d-87562a212</p>
-</div>
+
+</footer>
 
 </div>
 
