@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Vibin Dharmaraj | React Native Developer</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
 <style>
 
-body{
+*{
 margin:0;
-font-family:Arial;
-background:#0f172a;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(120deg,#0f172a,#020617);
 color:white;
+overflow-x:hidden;
 }
 
 .container{
@@ -21,9 +30,31 @@ margin:auto;
 padding:20px;
 }
 
+/* animated background */
+
+.bg-animation{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+background: radial-gradient(circle at 20% 30%, #22c55e55, transparent 40%),
+radial-gradient(circle at 80% 70%, #3b82f655, transparent 40%);
+animation: moveBg 8s infinite alternate;
+}
+
+@keyframes moveBg{
+0%{transform:translateY(0px)}
+100%{transform:translateY(-50px)}
+}
+
+/* header */
+
 header{
 text-align:center;
-padding:80px 20px;
+padding:100px 20px;
+animation:fadeIn 1.5s ease;
 }
 
 header h1{
@@ -31,30 +62,41 @@ font-size:48px;
 }
 
 header p{
-font-size:20px;
-color:#94a3b8;
+margin-top:10px;
+color:#cbd5f5;
 }
 
 button{
-background:#22c55e;
+margin-top:20px;
+padding:12px 30px;
 border:none;
-padding:12px 24px;
+border-radius:8px;
+background:#22c55e;
 color:white;
-border-radius:6px;
 cursor:pointer;
+transition:0.3s;
 }
+
+button:hover{
+transform:scale(1.05);
+}
+
+/* sections */
 
 section{
 margin-top:80px;
+animation:fadeUp 1s ease;
 }
 
 .section-title{
 font-size:30px;
+margin-bottom:25px;
 border-bottom:2px solid #22c55e;
 display:inline-block;
 padding-bottom:5px;
-margin-bottom:20px;
 }
+
+/* skills */
 
 .skills{
 display:grid;
@@ -63,11 +105,19 @@ gap:15px;
 }
 
 .skill{
-background:#1e293b;
+background:rgba(255,255,255,0.05);
 padding:15px;
-border-radius:6px;
+border-radius:10px;
 text-align:center;
+backdrop-filter:blur(10px);
+transition:0.3s;
 }
+
+.skill:hover{
+transform:translateY(-5px);
+}
+
+/* projects */
 
 .projects{
 display:grid;
@@ -76,9 +126,15 @@ gap:25px;
 }
 
 .project{
-background:#1e293b;
+background:rgba(255,255,255,0.05);
 border-radius:10px;
 overflow:hidden;
+backdrop-filter:blur(10px);
+transition:0.3s;
+}
+
+.project:hover{
+transform:translateY(-10px);
 }
 
 .project img{
@@ -91,32 +147,47 @@ object-fit:cover;
 padding:20px;
 }
 
-.project-content h3{
-margin-top:0;
-}
-
 .project-content a{
 color:#22c55e;
 text-decoration:none;
 font-weight:bold;
 }
 
+/* footer */
+
 footer{
-text-align:center;
 margin-top:80px;
+text-align:center;
 color:#94a3b8;
+padding-bottom:40px;
+}
+
+/* animations */
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(-20px)}
+to{opacity:1}
+}
+
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(40px)}
+to{opacity:1}
 }
 
 </style>
+
 </head>
 
 <body>
+
+<div class="bg-animation"></div>
 
 <div class="container">
 
 <header>
 
 <h1>Vibin Dharmaraj</h1>
+
 <p>React Native Developer | 5+ Years Experience</p>
 
 <button onclick="window.location.href='mailto:vvibin19@gmail.com'">
@@ -163,21 +234,20 @@ in fintech, OTT platforms, sports applications and service marketplaces.
 
 <div class="project">
 
-<img src="images/fixmycar.jpg">
+<img src="images/aha.jpg">
 
 <div class="project-content">
 
-<h3>FixMyCarDude</h3>
+<h3>AHA OTT</h3>
 
-<p>Location based service booking application with Stripe payments.</p>
+<p>Subscription based OTT streaming mobile platform.</p>
 
-<a href="https://play.google.com/store/apps/details?id=com.fixmycardude" target="_blank">
+<a href="https://play.google.com/store/apps/details?id=ahaflix.tv" target="_blank">
 View App
 </a>
 
 </div>
 </div>
-
 
 <div class="project">
 
@@ -185,9 +255,9 @@ View App
 
 <div class="project-content">
 
-<h3>ICICI Mutual Fund App</h3>
+<h3>ICICI Mutual Fund</h3>
 
-<p>Investment platform supporting buy, sell and switch investments.</p>
+<p>Investment mobile platform with buy/sell features.</p>
 
 <a href="https://play.google.com/store/apps/details?id=com.csam.icici.bank.imobile" target="_blank">
 View App
@@ -196,36 +266,17 @@ View App
 </div>
 </div>
 
-
 <div class="project">
 
-<img src="images/scorekeeper.jpg">
+<img src="images/fixmycar.jpg">
 
 <div class="project-content">
 
-<h3>Social Scorekeeper</h3>
+<h3>FixMyCarDude</h3>
 
-<p>Sports score tracking application with real-time chat.</p>
+<p>Location based car service booking app.</p>
 
-<a href="https://play.google.com/store/apps/details?id=and.socialscorekeeper.app" target="_blank">
-View App
-</a>
-
-</div>
-</div>
-
-
-<div class="project">
-
-<img src="images/aha.jpg">
-
-<div class="project-content">
-
-<h3>AHA OTT</h3>
-
-<p>Subscription based OTT streaming platform.</p>
-
-<a href="https://play.google.com/store/apps/details?id=ahaflix.tv" target="_blank">
+<a href="https://play.google.com/store/apps/details?id=com.fixmycardude" target="_blank">
 View App
 </a>
 
@@ -239,6 +290,7 @@ View App
 <footer>
 
 <p>Email: vvibin19@gmail.com</p>
+
 <p>LinkedIn: linkedin.com/in/vibin-d-87562a212</p>
 
 </footer>
